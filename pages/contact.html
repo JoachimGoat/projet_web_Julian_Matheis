@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez le Boss - EFREI Brainrot</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
+    <script src="../js/validation.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Nous <span class="highlight">Contacter</span></h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="equipe.html">La Team</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section class="content-container">
+            <h2>Envoyer un même ou une plainte</h2>
+
+            <form id="contactForm" action="#" method="get">
+                <div class="form-group">
+                    <label for="nom">Ton Blaze (Nom) :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Ex: Gigachad">
+                    <span class="error-msg" id="error-nom"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Ton Mail :</label>
+                    <input type="email" id="email" name="email" placeholder="sigma@efrei.fr">
+                    <span class="error-msg" id="error-email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="slang">Niveau de slang :</label>
+                    <select id="slang" name="slang">
+                        <option value="noob">Noob</option>
+                        <option value="mid">Mid</option>
+                        <option value="goated">Goated with the Sauce</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                    <span class="error-msg" id="error-message"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">Envoyer le Fax</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> EFREI Brainrot - <a href="equipe.html">À propos</a></p>
+    </footer>
+</body>
+
+</html>
