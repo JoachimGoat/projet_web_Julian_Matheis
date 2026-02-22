@@ -32,33 +32,24 @@
 
             <form id="contactForm" action="contact.php" method="POST">
                 <div class="form-group">
-                    <label for="nom">Ton Blaze (Nom) :</label>
-                    <input type="text" id="nom" name="nom" placeholder="Ex: Gigachad">
+                    <label for="nom">Ton Blaze :</label>
+                    <input type="text" id="nom" name="user_name">
                     <span class="error-msg" id="error-nom"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Ton Mail :</label>
-                    <input type="email" id="email" name="email" placeholder="sigma@efrei.fr">
+                    <input type="email" id="email" name="user_email">
                     <span class="error-msg" id="error-email"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="slang">Niveau de slang :</label>
-                    <select id="slang" name="slang">
-                        <option value="noob">Noob</option>
-                        <option value="mid">Mid</option>
-                        <option value="goated">Goated with the Sauce</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
                     <label for="message">Message :</label>
-                    <textarea id="message" name="message" rows="5"></textarea>
+                    <textarea id="message" name="user_message" rows="5"></textarea>
                     <span class="error-msg" id="error-message"></span>
                 </div>
 
-                <button type="submit" class="btn-submit">Envoyer le Fax</button>
+                <button type="submit" class="btn-submit">Envoyer</button>
             </form>
         </section>
     </main>
