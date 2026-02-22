@@ -1,43 +1,31 @@
+"use strict";
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contactForm");
 
     if (form) {
-        form.addEventListener("submit", function (event) {
+        form.addEventListener("submit", (event) => {
             let isValid = true;
-
-            // Récupération des champs
             const nom = document.getElementById("nom");
             const email = document.getElementById("email");
             const message = document.getElementById("message");
 
-            // Reset des erreurs
             document.querySelectorAll(".error-msg").forEach(el => el.textContent = "");
 
-            // Validation Nom
             if (nom.value.trim().length < 2) {
-                document.getElementById("error-nom").textContent = "Ton blaze est trop court (min 2 chars).";
+                document.getElementById("error-nom").textContent = "Blaze trop court (min 2).";
                 isValid = false;
             }
-
-            // Validation Email (Regex simple)
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email.value)) {
-                document.getElementById("error-email").textContent = "Email invalide. Tu trolles ?";
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                document.getElementById("error-email").textContent = "Email invalide NPC.";
                 isValid = false;
             }
-
-            // Validation Message
             if (message.value.trim() === "") {
-                document.getElementById("error-message").textContent = "Écris quelque chose, ne sois pas NPC.";
+                document.getElementById("error-message").textContent = "Écris un truc sigma.";
                 isValid = false;
             }
 
-            // Si invalide, on empêche l'envoi
-            if (!isValid) {
-                event.preventDefault();
-            } else {
-                alert("Message envoyé au CEO de l'Ohio !");
-            }
+            // Si JS détecte une erreur, il bloque l'envoi vers le PHP
+            if (!isValid) event.preventDefault();
         });
     }
 });

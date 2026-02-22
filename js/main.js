@@ -1,21 +1,13 @@
-// Attendre que le DOM soit chargé
+"use strict";
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Brainrot Engine Loaded... Skibidi bop yes yes.");
-
-    // 1. Mise à jour automatique de l'année dans le footer
+    // Année dynamique Footer
     const yearSpan = document.getElementById("year");
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-    // 2. Animation simple sur le titre (Bonus Créativité [cite: 2321])
+    // Animation dynamique Titre (Bonus JS)
     const title = document.querySelector("h1");
     if (title) {
-        title.addEventListener("mouseover", () => {
-            title.style.color = "#00ff9d";
-        });
-        title.addEventListener("mouseout", () => {
-            title.style.color = "initial";
-        });
+        title.addEventListener("mouseover", () => title.style.transform = "scale(1.05)");
+        title.addEventListener("mouseout", () => title.style.transform = "scale(1)");
     }
 });
